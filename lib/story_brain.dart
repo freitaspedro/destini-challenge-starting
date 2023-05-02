@@ -38,8 +38,18 @@ class StoryBrain {
 
   //TODO: Step 17 - Create a method called nextStory(), it should not have any outputs but it should have 1 input called choiceNumber which will be the choice number (int) made by the user.
   void nextStory(int userChoice) {
-    if(_number < _storyData.length - 1) {
-      _number++;
+    if (_number == 0 && userChoice == 1) {
+      _number = 2;
+    } else if (_number == 0 && userChoice == 2) {
+      _number = 1;
+    } else if (_number == 1 && userChoice == 1) {
+      _number = 2;
+    } else if (_number == 1 && userChoice == 2) {
+        _number = 3;
+    } else if (_number == 2 && userChoice == 1) {
+      _number = 5;
+    } else if (_number == 2 && userChoice == 2) {
+        _number = 4;
     }
   }
 
